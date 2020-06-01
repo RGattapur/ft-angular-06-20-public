@@ -1,0 +1,7 @@
+<!-- 
+    Angular safe navigation operator :
+    Do not try to evaluate the name property if object base is null.
+    Otherwise error "Cannot read property NAME of null" happens
+    before method setBase() runs for the 1st time in the interval Observable.
+-->
+<section>{{ base?.name }}</section>

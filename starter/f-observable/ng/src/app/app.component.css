@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+
+.demo{
+    font-family: 'Ropa Sans',tahoma;
+    color:darkslategray;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+    margin:0 auto;
+}
+
+.flex{
+  margin:2rem 0;
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.circle{
+  color:white;
+  border-radius: 50%;
+  padding:1rem;
+  text-align: center;
+  margin:0.25rem;
+  border:4px solid darkslategrey;
+  width:2.5rem;
+  height:2.5rem;
+}
+
+.circle:hover{
+  transition: 0.2s;
+  border-radius: 0;
+}
+
+.green{
+  background-color: green;
+}
+.blue{
+  background-color: blue;
+}
+.red{
+  background-color: red;
+}
+.orange{
+  background-color: orange;
+}
+
+.button{
+  cursor: pointer;
+  letter-spacing: 1px;
+  background-color: darkslategrey;
+  padding:0.5rem;
+  text-align: center;
+  margin:2rem 0;
+  width:8rem;
+  color:white;
+
+}

@@ -1,0 +1,16 @@
+<section>
+
+  <p class="totalFilms">{{total}} film(s)</p>
+
+  <form (ngSubmit)="addFilm()">
+
+    <input type="text" [formControl]="form.controls.film" />
+    <p class="button" (click)="addFilm()">Add film</p>
+    <p class="button" (click)="empty()">Empty</p>
+    <p class="button" (click)="createSample()">Sample</p>
+    <p class="button" (click)="sort()">Sort</p>
+
+  </form>
+
+</section>
+

@@ -1,0 +1,10 @@
+
+<section class="demo">
+
+  <section class="button" (click)="toggleFlag()">{{ flag ? "REMOVE" : "CREATE" }}</section>
+
+  <hr/>
+
+  <app-draw *ngIf="flag" ></app-draw>
+
+</section>

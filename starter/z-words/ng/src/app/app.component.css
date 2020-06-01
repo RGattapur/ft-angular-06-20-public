@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+
+
+.sock{
+  font-family: "ropa sans";
+  font-size: 2.5rem;
+  text-align: center;
+  margin:2rem;
+  letter-spacing: 2px;
+  color:darkslategrey;
+  overflow-wrap: break-word;
+}
+
+.disabled{
+  cursor: default;
+  opacity: 0.4;
+}
+
+.help{
+  background-color: orangered;
+  padding:1rem;
+  text-align: center;
+  color:white;
+  letter-spacing: 2px;
+}
+
+span{
+  color:orangered;
+  padding-left: 0.5rem;
+}

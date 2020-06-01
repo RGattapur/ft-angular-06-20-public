@@ -1,0 +1,48 @@
+
+.route{
+	font-family: Lato,tahoma;
+	padding:0;
+  margin:1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+nav{
+  margin:1rem 0;
+  padding:1rem 0;
+  border-bottom: 1px solid grey;
+}
+
+span{
+	letter-spacing:1px;
+	padding-right:2rem;
+  cursor: pointer;
+  text-decoration: none;
+  outline-style: none;
+  min-width:10rem;
+  display: inline-block;
+}
+
+.selected{
+	color:orangered;
+}
+
+.page{
+	height: 40rem;
+}
+
+.jump{
+   margin-top:8rem;
+   border-top: 1px solid grey;
+   border-bottom: 1px solid grey;
+}
+.jump span:first-child{
+  color:orangered
+}
+
+.jump span{
+  width:10rem;
+  min-width: 0;
+  font-size: 1rem;
+  padding:2rem 0;
+}

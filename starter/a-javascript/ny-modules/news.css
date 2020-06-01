@@ -1,0 +1,47 @@
+body{
+    font-family: Oswald;
+    font-size: 1rem;
+}
+
+.news{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.story{
+    padding:0.5rem;
+    border:1px solid lightgrey;
+    margin:0.25rem;
+    cursor: pointer;
+    width:14rem;
+    color:darkslategrey;
+    text-align: center;
+    height:12rem;
+}
+
+.story:hover{
+    background-color: WhiteSmoke;
+}
+
+h4{
+    color:orangered;
+    text-transform: capitalize;
+}
+
+p{
+    letter-spacing: 1px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.footer{
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.4;
+    letter-spacing: 4px;
+    margin-top: 2rem;
+}

@@ -1,0 +1,72 @@
+
+.shop{
+    font-family: 'Oswald';
+    text-align: center;
+    font-size: 1.5rem;
+    padding:1rem;
+}
+
+
+.shop h2{
+  color: black;
+  font-size: 1.5rem;
+  opacity: 0.5;
+  letter-spacing: 2px;
+}
+
+.produce{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+}
+
+.item{
+    padding: 1rem;
+    border:2px solid darkslategrey;
+    margin:0.5rem;
+    text-align: left;
+    width: 10rem;
+    cursor: pointer;
+    user-select: none;
+    color:darkslategrey;
+    letter-spacing: 1px;
+    border-radius: 0.25rem;
+}
+
+.item p{
+  margin:0;
+  padding:0;
+}
+
+.item p:first-child, .item p:last-child {
+  color:orangered;
+}
+
+.item:hover{
+    background-color: beige;
+}
+
+.outstock{
+    opacity: 0.4;
+    cursor:default;
+    border:2px dashed lightgrey;
+    font-style: italic;
+}
+
+.outstock:hover{
+   background-color: white;
+}
+
+.button{
+  background-color: orangered;
+  padding:1rem;
+  text-align: center;
+  color:white;
+  width:10rem;
+  margin:1rem auto;
+  cursor: pointer;
+  border-radius: 1rem;
+  letter-spacing: 1px;
+}

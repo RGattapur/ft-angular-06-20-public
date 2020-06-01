@@ -1,0 +1,47 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.intro{
+    font-family: 'Lato',tahoma;
+    color:darkslategray;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.chosen{
+  padding:0.5rem;
+  display: inline-block;
+  margin:2rem 0;
+  color:orangered;
+}
+
+.topics{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.panel{
+  margin:0.5rem;
+  padding:1rem;
+  background-color: darkslategray;
+  color:white;
+  width:16rem;
+  cursor: pointer;
+  user-select: none;
+  text-align: left;
+  height:8rem;
+}
+
+h4{
+    color:orangered;
+    margin: 0;
+    padding:0;
+}
+
+.inactive{
+  opacity: 0.4;
+  cursor: default;
+}

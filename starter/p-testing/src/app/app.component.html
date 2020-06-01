@@ -1,0 +1,11 @@
+
+
+<section class="demo">
+  <p>Cities: <span class="total">{{cities?.length}}</span></p>
+  <section *ngFor="let city of cities">
+    <p class="city" (click)="remove(city)">{{ city.name }}<span>{{ city.temp}}</span></p>
+  </section>
+</section>
+
+  <!-- {{ observe | async | json }}-->
+

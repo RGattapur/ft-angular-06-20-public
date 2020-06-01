@@ -1,0 +1,24 @@
+
+<section class="route">
+
+  <nav>
+    <span>Television</span>
+    <span>Radio</span>
+  </nav>
+
+  <section class="page">
+      <router-outlet></router-outlet>
+  </section>
+
+  <section class="jump">
+    <span>Jump to</span>
+    <span (click)="goRadio('4')">Radio 4</span>
+    <span (click)="goRadio('wmot')">WMOT</span>
+    <span (click)="goBBC4()">BBC4</span>
+    <span (click)="go17()">Channel 17</span>
+    <span (click)="goHome()">Home</span>
+  </section>
+
+
+
+</section>

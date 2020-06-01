@@ -1,0 +1,191 @@
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// core/core.module.ts 
+// Throws an error if the CoreModule is loaded more than once. 
+
+export class CoreModule {
+
+    private error:string = `Only import CoreModule once in app.module.ts`;
+  
+    constructor(@Optional() @SkipSelf() m:CoreModule ) {
+      if( m ) {
+        throw new Error( this.error );
+      }
+    }
+  }
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// FILE : features/fruit/fruit.component.ts
+// It gets data from DataService and sends messages to MessagesService.
+
+export class FruitComponent implements OnInit {
+
+    private path : string = "assets/json/fruit.json" ;
+    private fruit:any = [];
+  
+    constructor( private ds:DataService, private ms:MessagesService) {}
+  
+    ngOnInit() {
+      this.ds.getData( this.path ).subscribe( data => this.fruit=data);
+    }
+  
+    select = (f) => this.ms.sendMessage(f)
+  
+}
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// FILE : features/fruit/fruit.component.html
+
+ <h2>Fruit</h2>
+<section class="panel">
+    <section class="item" *ngFor="let f of fruit" (click)="select(f.name)">{{ f.name }}</section>
+</section>
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// features/vegt/vegt.component.ts
+// features/vegt/vegt.component.html
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// routes/app-routing.module.ts
+
+{ 
+  path: 'fruit', 
+  loadChildren: () => import('../features/fruit/fruit.module').then(m => m.FruitModule),
+  data : { lazy:true }
+}
+
+{ 
+  path: 'vegetables', 
+  loadChildren: () => import('../features/vegetables/vegetables.module').then(m => m.VegetablesModule),
+  data : { lazy:false }
+}
+
+// -------------------------------------------------------------------------
+
+class CustomLoader implements PreloadingStrategy {
+  preload(route: Route, load: Function): Observable<any> {
+    console.log( `PreloadingStrategy for route ${route.path} is ${route.data.lazy}` )
+    return route.data && route.data.lazy ? load() : of(null);
+  }
+}
+
+
+// -------------------------------------------------------------------------
+
+@NgModule({
+  imports: [RouterModule.forRoot( AppRoutes,{preloadingStrategy:CustomLoader} )],
+  exports: [RouterModule],
+  providers: [CustomLoader]
+})
+
+// -------------------------------------------------------------------------
+
+{preloadingStrategy:PreloadAllModules}
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// core/services/data.service.ts
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { CoreModule } from '../core.module';
+
+@Injectable({
+  providedIn: CoreModule
+})
+
+export class DataService {
+	constructor( private http:HttpClient ) {}
+
+	getData(path) {
+    return this.http.get( path );
+  }
+}
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// core/services/messsages.service.ts
+
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+
+export class MessagesService {
+
+  private channel = new Subject<string>();
+
+  constructor() {}
+
+  sendMessage(s: any) {
+    this.channel.next(s);
+    console.log(`SendMessage ${s}`)
+  }
+
+  getChannel() {
+    return this.channel.asObservable()
+  }
+}
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// app/app.component.ts
+
+import {MessagesService} from "./core/services/messages.service";
+
+
+export class AppComponent {
+
+  basket = [];
+
+  constructor(private ms: MessagesService) { }
+
+  ngOnInit() {
+      // Subscribe to an Observable stream of messages from the service.
+      this.ms.getChannel().subscribe( item => this.basket.push( item ));
+  }
+}
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// shared/shared.module.ts
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import {FirstPipe} from "./pipes/first.pipe";
+
+@NgModule({
+  declarations: [FirstPipe],
+  imports: [
+    CommonModule
+  ],
+  exports: [
+    FirstPipe
+  ]
+})
+export class SharedModule {}
+
+// •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••
+
+// shared/first.pipe.ts
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'first'
+})
+export class FirstPipe implements PipeTransform {
+
+  transform(value: any): any {
+    return value.split(" ")[0]
+  }
+
+}
+

@@ -1,0 +1,7 @@
+[
+    { "name" : "Apples organic", "price":0.45 },
+    { "name" : "Pears conference", "price":0.45 },
+    { "name" : "Peaches special", "price":0.45 },
+    { "name" : "Oranges satsumas", "price":0.45 },
+    { "name" : "Lemons fresh", "price":0.45 }
+]

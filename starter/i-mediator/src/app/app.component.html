@@ -1,0 +1,15 @@
+
+<section>
+
+  <!-- 
+    This parent component app.component.ts acts as a MEDIATOR between
+    two loosely coupled component instances. 
+  -->
+
+  <!-- The Base componment emits changeBase events -->
+  <app-base (changeBase)="handleBase($event)"></app-base>
+
+  <!-- The Draw component listens for changes to its dnaSequence input. -->
+  <app-draw [dnaSequence]="sequence"></app-draw>
+
+</section>

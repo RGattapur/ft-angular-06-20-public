@@ -1,0 +1,78 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+
+.demo{
+	font-family: 'Ropa Sans',tahoma;
+	color: darkslategrey;
+	font-size: 1.25rem;
+	margin:2rem;
+  min-width: 20rem;
+}
+
+span{
+	color:orangered;
+	margin-left: 0.5rem;
+	cursor: pointer;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+input{
+	font-size: 1rem;
+    padding:0.5rem;
+}
+
+.button{
+	border:none;
+	padding: 0.5rem;
+	font-size: 1rem;
+	background-color: orangered;
+    color:white;
+    letter-spacing: 2px;
+	cursor: pointer;
+	margin:1rem 0.5rem 1rem 0;
+	width:6rem;
+	display: inline-block;
+	user-select: none;
+}
+
+input{
+	margin-right: 1rem;
+}
+
+hr{
+	margin-bottom: 2rem;
+}
+
+.films{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.film{
+	padding:0.5rem;
+	background-color: darkslategrey;
+	color:white;
+	margin:4px;
+	width:8rem;
+	height:5rem;
+	font-size: 0.9rem;
+	line-height: 2;
+	cursor: pointer;
+	letter-spacing: 1px;
+	/* text-align: center; */
+}
+
+.film:hover{
+	color:green;
+}
+
+.film:nth-of-type(odd){
+	transform: rotate(2deg);
+}
+
+.film:nth-of-type(even){
+	transform: rotate(-2deg);
+}
