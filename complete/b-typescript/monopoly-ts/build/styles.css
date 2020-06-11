@@ -1,0 +1,54 @@
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    color:darkslategrey;
+}
+
+body{
+    font-family: oswald;
+    line-height: 2;
+}
+
+.page{
+    margin:1rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:0.5rem;
+    width:25%;
+}
+
+.logo{
+    width:16rem;
+    height:16rem;
+    background-color: gold;
+    margin:0;
+    font-size: 2.5rem;
+    text-align: left;
+    line-height: 1;
+    padding:0.5rem;
+    cursor: pointer;
+}
+
+.messages{
+    font-size: 1.5rem;
+    text-align: left;
+    margin-left: 1rem;
+    border-left: 1px solid lightgrey;
+}
+
+p{
+    margin:0.5rem 0;
+    padding-left:1rem;
+}
+
+.green{
+    background-color: forestgreen;
+    color:white;
+}
+
+.red{
+    background-color: red;
+    color:white;
+}

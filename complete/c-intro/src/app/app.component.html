@@ -1,0 +1,19 @@
+
+<section class="intro">
+
+  <section class="intro">{{ heading }}</section>
+  <!-- <section class="intro" [textContent]="heading"></section> -->
+
+    <section class="topics">
+
+      <!-- COMPOSITION: this view contains creating multiple instances of app-panel component -->
+      <!-- app-panel accepts a {name,purpose} object as an INPUT -->
+      <!-- app-panel emits SELECT custom events -->
+      <!-- Variable topic is locally scoped within this ngFor directive. -->
+      <app-panel [topic]="topic" (select)="selectPanel($event)" *ngFor="let topic of topics"></app-panel>
+
+    </section>
+
+    <section class="chosen" *ngFor="let n of names">{{n}}</section>
+
+</section>

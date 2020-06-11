@@ -1,0 +1,24 @@
+{
+  "name": "webpack4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev-help": "echo Development mode: code is bundled but not minified",
+    "dev": "webpack --watch --mode development ./source/code.ts --output ./build/bundle.js",
+    "build-help": "echo Production mode: code minified",
+    "build": "webpack --watch --mode production ./source/code.ts --output ./build/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
+  }
+}

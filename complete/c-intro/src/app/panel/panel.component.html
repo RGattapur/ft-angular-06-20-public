@@ -1,0 +1,7 @@
+<!-- Conditionally style the panel based on its state -->
+<section (click)="selectPanel()" class="panel" [ngClass]="{ 'inactive' : !active }">
+  <h4>{{ topic.name }}</h4>
+  <p>{{ topic.purpose }}</p>
+</section>
+
+

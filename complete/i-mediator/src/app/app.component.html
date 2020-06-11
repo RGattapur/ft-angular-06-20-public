@@ -1,0 +1,19 @@
+
+<section>
+
+  <!-- 
+    The service message.service.ts acts as a MEDIATOR between
+    two loosely coupled component instances. 
+  -->
+
+  <!-- The Base componment sends a message to the service -->
+  <app-base></app-base>
+
+  <!-- The Draw component subscribes to an Observable stream 
+  of messages from the service. -->
+
+  <app-draw></app-draw>
+
+  <!-- The parent component app.component.ts is not involved. -->
+
+</section>

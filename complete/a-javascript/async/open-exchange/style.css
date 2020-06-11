@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  text-decoration: none;
+}
+
+body{
+    font-family: 'Oswald', Arial;
+    font-size: 100%;
+}
+
+.exchange{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.panel{
+    border:1px solid darkslategrey;
+    padding:1rem;
+    text-align: center;
+    margin:0.5rem;
+    width:10rem;
+    cursor: pointer;
+}
+
+.panel:hover{
+    transition:.1s;
+    transform: scale(1.25);
+}
+
+.rate{
+    color:orangered;
+}
+
+.purchase{
+    margin:2rem auto;
+    text-align: center;
+    height:4rem;
+    font-size: 1.5rem;;
+}

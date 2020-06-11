@@ -1,0 +1,23 @@
+
+<section class="demo">
+
+  <section class="flex original">
+    <p (click)="remove(city.name)" class="city" *ngFor="let city of europe">{{city.name}}<span>{{city.temp | celsius:true }}</span></p>
+  </section>
+
+  <h4>Spanish cities</h4>
+  <section class="flex"><p class="city" *ngFor="let c of europe | select:'nation':'ES'">{{ c.name }}</p></section>
+
+  <h4>Capital cities</h4>
+  <section class="flex"><p class="city" *ngFor="let c of europe | select:'capital':true">{{ c.name }}</p></section>
+
+  <h4>Cities without a subway</h4>
+  <section class="flex"><p class="city" *ngFor="let c of europe | select:'subway':false">{{ c.name }}</p></section>
+
+  <h4>Cities whose temperature equals 80°F</h4>
+  <section class="flex"><p class="city" *ngFor="let c of europe | select:'temp':80">{{ c.name }}</p></section>
+
+
+
+
+</section>

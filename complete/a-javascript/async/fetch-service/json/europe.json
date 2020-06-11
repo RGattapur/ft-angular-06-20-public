@@ -1,0 +1,18 @@
+{
+    "europe":[
+        { "name":"Italy", "code":"it" },
+        { "nation":"Spain", "code":"es" }
+    ],
+    "es":[
+        { "city":"Madrid", "temp":28 },
+        { "city":"Seville", "temp":40 }
+    ],
+    "it":[
+        { "city":"Rome", "temp":22 },
+        { "city":"Florence", "temp":18 }
+    ],
+    "help":[
+        { "install":"npm i -g json-server" },
+        { "serve":"json-server --port 4000 json/europe.json" }
+    ]
+}

@@ -1,0 +1,63 @@
+
+body{
+    font-family: oswald;
+    color:darkslategray;
+}
+
+.spain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top:2rem;
+}
+
+.city{
+
+    padding:1rem;
+    border:1px solid lightgrey;
+    margin:4px;
+    text-align: center;
+    width:5rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.city p:first-child{
+    color: orangered;
+}
+
+.city:nth-of-type(odd){
+    transform: rotate(4deg);
+}
+.city:nth-of-type(even){
+    transform: rotate(-4deg);
+}
+
+h1{
+    font-size: 1.25rem;
+    color:darkslategrey;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 1px;
+    margin:1rem;
+    padding:1rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+span{
+    color:orangered;
+}
+
+.holiday{
+    margin:2rem auto;
+    padding:1rem;
+    text-align: center;
+    /* width:16rem; */
+    font-size: 1.5rem;
+}
+
+.selected{
+    cursor:default;
+    opacity: 0.4;
+}

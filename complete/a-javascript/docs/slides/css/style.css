@@ -1,0 +1,95 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.slides{
+	min-width: 48rem;
+	display:flex;
+	flex-direction: column;
+	height:100vh;
+}
+
+.presentation{
+	text-align: center;
+	flex:1;
+	margin:0;
+	padding:0;
+}
+
+.slide{
+
+	font-size:1.5rem;
+	letter-spacing: 1px;
+	display:block;
+	text-align: center;
+	margin:0 auto;
+	/* padding:2rem 8rem; */
+
+}
+
+.slide h2{
+	color: orangered;
+}
+
+.slide p{
+	margin:1rem;
+	line-height:2;
+}
+
+.navigate{
+	height:4rem;
+	background-color:darkslategrey;
+	color:white;
+	text-align: center;
+	letter-spacing: 2px;
+	padding:1rem;
+	font-size: 1.5rem;
+	margin:2px 0;
+	line-height: 2;
+}
+
+.navigate span{
+	color:orangered;
+	animation: pulse 2s infinite;
+	display: inline-block;
+	margin:0 1rem;
+}
+
+@-webkit-keyframes pulse {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+
+span{
+	color:orangered;
+}
+
+a{
+	color:orangered;
+	text-decoration: none;
+}
+
+.progress{
+	display:flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin:1rem auto 0 auto;
+	
+}
+
+.bullet{
+	margin:0 0.2rem;
+	cursor: pointer;
+	color:lightgrey;
+	font-size: 1.5rem;
+}
+
+.bullet:hover{
+	color:orangered;
+}

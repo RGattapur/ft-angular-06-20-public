@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ropa+Sans');
+
+.route{
+	text-align: center;
+	font-family: 'Ropa Sans',tahoma;
+	padding:0;
+	margin:0;
+	font-size: 1.5rem;
+}
+
+nav{
+	background-color:#444444;
+	margin:1px 0;
+}
+
+a{
+	color:white;
+	text-decoration:none;
+	letter-spacing:2px;
+	padding:1rem 2rem;
+	display:inline-block;
+	border-right:1px solid white;
+	text-align:center;
+	min-width: 100px;
+	cursor: pointer;
+}
+
+a:first-child{
+	border-left:1px solid white;
+}
+
+h1{
+	font-size: 2.5rem;
+}
+
+.active{
+	color:green;
+}
+
+span{
+	color:orangered;
+}
+
+.basket{
+	min-height: 6rem;
+}
+
+.basket .item{
+	background-color: darkslategray;
+	color:white;
+}
+
+.panel{
+	text-align: center;
+	padding:0.5rem;
+	margin:1rem auto;
+	border:2px solid lightgrey;
+	font-size: 1.5rem;
+	width:80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.item{
+	text-align: center;
+	padding:1rem;
+	margin:1rem ;
+	border:2px solid lightgrey;
+	font-size: 1.25rem;
+	cursor: pointer;
+	width:8rem;
+}

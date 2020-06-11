@@ -1,0 +1,15 @@
+
+<section class="todo">
+
+  <form (ngSubmit)="addItem()">
+      <input type="text" [formControl]="list.controls.item" />
+      <button>Add item</button>
+  </form>
+
+  <ul>
+      <li *ngFor="let item of items">{{ item.desc | titlecase }}<span (click)="removeItem(item)">REMOVE</span></li>
+  </ul>
+
+  <button (click)="empty()">Empty</button>
+
+</section>

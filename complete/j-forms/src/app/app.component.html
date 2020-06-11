@@ -1,0 +1,41 @@
+
+<form
+class="films"
+[formGroup]="film"
+(ngSubmit)="addFilm(film)">
+
+<section>
+  <label>Title</label>
+  <input type="text" [formControl]="tc">
+  <span *ngIf="!tc.valid && tc.touched">{{ tc.errors.titleCase }}</span>
+</section>
+
+<section>
+  <label>Director</label>
+  <input type="text" [formControl]="dc">
+  <span *ngIf="!dc.valid && dc.touched">{{ dc.errors.shortName }}</span>
+</section>
+
+<button type='button' (click)="addGenre()" class="button">Add Genre</button>
+
+<section class="genre" *ngFor="let control of genres.controls; index as j">
+  <input [formControl]="genres.controls[j]" />
+  <button type='button' (click)="removeGenre(j)">Remove</button>
+</section>
+
+<hr/>
+
+<button
+[disabled]="!film.valid"
+[ngClass]="{'submit' : film.valid }"
+type="submit">
+Add film</button>
+
+<pre>Title
+  dirty-state <span>{{ film.controls.title.dirty }}</span>
+  pristine-state <span>{{ film.controls.title.pristine }}</span>
+  touched <span>{{ film.controls.title.touched }}</span>
+  valid <span>{{ film.controls.title.valid }}</span>
+</pre>
+
+</form>

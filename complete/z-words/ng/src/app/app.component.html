@@ -1,0 +1,11 @@
+
+<section class="sock">
+
+  <p class="help" *ngIf="!flag">This game requires 2 players</p>
+  <p *ngIf="flag">{{ word.en }}<span>{{ word.showEs }}</span></p>
+
+  <hr/>
+
+  <p class="word">{{ answer }}</p>
+
+</section>

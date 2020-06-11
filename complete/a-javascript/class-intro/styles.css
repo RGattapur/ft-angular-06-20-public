@@ -1,0 +1,15 @@
+
+body{
+    font-family: oswald;
+    line-height: 2;
+}
+
+.page{
+    font-size: 4rem;
+    background-color: gold;
+    padding:4rem;
+    margin:2rem auto;
+    width:20rem;
+    letter-spacing: 1px;
+    text-align: center;
+}

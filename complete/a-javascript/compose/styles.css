@@ -1,0 +1,27 @@
+
+*{
+    padding:0;
+    margin:0
+}
+
+body{
+    font-family: oswald;
+    line-height: 2;
+    padding:1rem;
+    color:darkslategrey;
+    font-size: 1.5rem;
+}
+
+section{
+    margin:1rem0;
+    padding:1rem;
+    border-bottom:1px solid lightgrey;
+    letter-spacing: 1px;
+}
+
+span{
+    background-color:orangered;
+    color:white;
+    padding:0 1rem;
+    margin-right:1rem;
+}

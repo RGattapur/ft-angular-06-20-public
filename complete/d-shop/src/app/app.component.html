@@ -1,0 +1,18 @@
+
+<section class="shop">
+
+  <h2>{{ shopName }}</h2>
+
+  <section class="produce">
+    <app-item *ngFor="let s of stockItems" [item]="s" (select)="buyItem(s)"></app-item>
+  </section>
+
+  <section class="produce basket">
+    <app-item *ngFor="let s of basket" [item]="s" (select)="removeItem(s)"></app-item>
+  </section>
+
+  <p *ngIf="basket.length">TOTAL {{ getTotal() | currency:"GBP":"£" }}</p>
+
+  <p class="button" *ngIf="basket.length" (click)="init()">Empty Basket</p>
+
+</section>

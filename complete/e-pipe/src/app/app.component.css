@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.demo{
+    font-family: Lato,tahoma;
+    font-size: 1.25rem;
+}
+
+p{
+    padding:1rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+.flex{
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom:2rem;
+}
+
+.city{
+  padding:0.5rem;
+  border:1px solid darkslategrey;
+  margin:1rem 1px;
+  text-align: center;
+  width:10rem;
+  letter-spacing: 1px;
+}
+
+.original .city{
+  background-color:gold;
+  cursor: pointer;
+
+}
+.original .city:hover{
+  background-color:firebrick;
+  color:white;
+}
+
+
+span{
+  color: orangered;
+  padding:0 0.5rem;
+}
+
+
+h4{
+  font-size: 1rem;
+  margin:0;
+}

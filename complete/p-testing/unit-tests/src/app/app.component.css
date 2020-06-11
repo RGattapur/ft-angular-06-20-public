@@ -1,0 +1,18 @@
+.demo{
+  font-family: menlo;
+  font-size: 1.25rem;
+}
+
+.city{
+  margin:2.5rem auto;
+  padding:1rem;
+  border:1px solid darkslategrey;
+  width:16rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+span{
+  color:orangered;
+  padding-left: 0.5rem;
+}

@@ -1,0 +1,14 @@
+
+<nav>
+
+  <span routerLink='/tv/4' routerLinkActive='selected'
+  [state]='{name:"BBC Four",image:"bbc-four.png"}' >BBC4</span>
+
+  <span routerLink='/tv/17' routerLinkActive='selected'
+  [state]='{name:"Channel K17BA-D Yreka California",image:"channel17.jpg"}'>Channel 17</span>
+
+</nav>
+
+<h2>{{ channel?.name }}</h2>
+
+<img *ngIf="channel.image" src='assets/{{channel.image}}' />

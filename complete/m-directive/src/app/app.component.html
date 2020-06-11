@@ -1,0 +1,16 @@
+
+<section class="shop">
+
+  <section class="fruitveg">
+
+    <p single
+      [item]="fv"
+      *ngFor="let fv of fruitVeg"
+      (select)="addBasket($event)">{{ fv.name }}</p>
+
+  </section>
+
+  <section>{{ basket | json }}</section>
+
+</section>
+
