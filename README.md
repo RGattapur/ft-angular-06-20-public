@@ -3,7 +3,7 @@
     height="250"
     width="250"
     alt="Framework Training"
-    src="https://github.com/JohnCoumbe/ft-angular-04-20-v12/blob/master/ft.gif"
+    src="https://github.com/JohnCoumbe/ft-angular-06-20-public/blob/master/ft.gif"
   />
 </a> 
 
